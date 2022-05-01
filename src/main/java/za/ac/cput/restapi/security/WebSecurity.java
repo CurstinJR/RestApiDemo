@@ -15,5 +15,6 @@ public class WebSecurity extends WebSecurityConfigurerAdapter
         http
                 .cors().and().csrf().disable()
                 .httpBasic().disable();
+        http.headers().frameOptions().disable();
     }
 }
