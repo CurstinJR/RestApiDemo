@@ -8,28 +8,39 @@ import za.ac.cput.restapi.service.UserService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/users")
 @AllArgsConstructor
 public class UserController
 {
     private UserService userService;
 
-    @GetMapping("/users")
+    @GetMapping
     public List<User> getAll()
     {
         return userService.getAll();
     }
 
-    @GetMapping("/user/{id}")
+    @GetMapping("/{id}")
     public User getById(@PathVariable Long id)
     {
         return userService.getById(id);
     }
 
-    @GetMapping("/user")
-    public User getByFullName(@RequestParam String firstName,
-                              @RequestParam String lastName)
+    @PostMapping
+    public User addUser(@RequestBody User user)
     {
-        return userService.getByFullName(firstName, lastName);
+        return userService.addUser(user);
+    }
+
+    @PutMapping("/{id}")
+    public User updateUser(@RequestBody User user, @PathVariable Long id)
+    {
+        return userService.updateUser(user, id);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable Long id)
+    {
+        userService.deleteUserById(id);
     }
 }
