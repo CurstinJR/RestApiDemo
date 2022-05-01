@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity(name = "roles")
-@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
@@ -21,6 +20,11 @@ public class Role
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String roleName;
+
+    public Role(String roleName)
+    {
+        this.roleName = roleName;
+    }
 
     @Override
     public boolean equals(Object o)
