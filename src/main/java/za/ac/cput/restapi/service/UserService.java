@@ -1,6 +1,7 @@
 package za.ac.cput.restapi.service;
 
 import lombok.AllArgsConstructor;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import za.ac.cput.restapi.entity.Role;
 import za.ac.cput.restapi.entity.User;
@@ -16,6 +17,7 @@ public class UserService
 {
     private UserRepository userRepository;
     private RoleService roleService;
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public List<User> getAll()
     {
@@ -36,6 +38,7 @@ public class UserService
 
     public User addUser(User user)
     {
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setRoles(roleService.getByRoleNames(user.getRoles()));
         user.setCreatedAt(LocalDateTime.now());
         return userRepository.save(user);
@@ -55,7 +58,7 @@ public class UserService
                     newUser.getEmail() :
                     user.getEmail();
             String password = newUser.getPassword() != null ?
-                    newUser.getPassword() :
+                    bCryptPasswordEncoder.encode(newUser.getPassword()) :
                     user.getPassword();
             Set<Role> roles = newUser.getRoles().isEmpty() ?
                     user.getRoles() :
