@@ -1,4 +1,4 @@
-package za.ac.cput.restapi.entity;
+package za.ac.cput.restapi.entity.User;
 
 import lombok.*;
 import org.hibernate.Hibernate;

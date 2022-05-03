@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import za.ac.cput.restapi.entity.Role;
+import za.ac.cput.restapi.entity.User.Role;
+import za.ac.cput.restapi.repository.User.RoleRepository;
 
 import java.util.List;
 

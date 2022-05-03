@@ -1,8 +1,8 @@
-package za.ac.cput.restapi.repository;
+package za.ac.cput.restapi.repository.User;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import za.ac.cput.restapi.entity.Role;
+import za.ac.cput.restapi.entity.User.Role;
 
 import java.util.Collection;
 import java.util.Set;

@@ -1,7 +1,6 @@
 package za.ac.cput.restapi.controller.UserController;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -9,12 +8,14 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
-import za.ac.cput.restapi.entity.Role;
-import za.ac.cput.restapi.entity.User;
-import za.ac.cput.restapi.repository.RoleRepository;
-import za.ac.cput.restapi.repository.UserRepository;
-import za.ac.cput.restapi.service.RoleService;
-import za.ac.cput.restapi.service.UserService;
+import za.ac.cput.restapi.controller.User.UserController;
+import za.ac.cput.restapi.controller.User.UserModelAssembler;
+import za.ac.cput.restapi.entity.User.Role;
+import za.ac.cput.restapi.entity.User.User;
+import za.ac.cput.restapi.repository.User.RoleRepository;
+import za.ac.cput.restapi.repository.User.UserRepository;
+import za.ac.cput.restapi.service.User.RoleService;
+import za.ac.cput.restapi.service.User.UserService;
 
 import java.time.LocalDateTime;
 import java.util.List;

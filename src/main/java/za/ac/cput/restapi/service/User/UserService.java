@@ -1,11 +1,12 @@
-package za.ac.cput.restapi.service;
+package za.ac.cput.restapi.service.User;
 
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import za.ac.cput.restapi.entity.Role;
-import za.ac.cput.restapi.entity.User;
-import za.ac.cput.restapi.repository.UserRepository;
+import za.ac.cput.restapi.entity.User.Role;
+import za.ac.cput.restapi.entity.User.User;
+import za.ac.cput.restapi.repository.User.UserRepository;
+import za.ac.cput.restapi.service.User.RoleService;
 
 import java.time.LocalDateTime;
 import java.util.List;
