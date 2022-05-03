@@ -1,4 +1,4 @@
-package za.ac.cput.restapi.security;
+package za.ac.cput.restapi.security.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
