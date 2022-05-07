@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import za.ac.cput.restapi.entity.User.Role;
 import za.ac.cput.restapi.entity.User.User;
 import za.ac.cput.restapi.repository.User.UserRepository;
-import za.ac.cput.restapi.service.User.RoleService;
 
 import java.time.LocalDateTime;
 import java.util.List;

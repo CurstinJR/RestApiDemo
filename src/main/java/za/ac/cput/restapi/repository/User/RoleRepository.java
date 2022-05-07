@@ -11,6 +11,8 @@ import java.util.Set;
 public interface RoleRepository extends JpaRepository<Role, Long>
 {
     Set<Role> findByRoleNameIn(Collection<String> roleName);
+
     Role findByRoleName(String roleName);
+
     void deleteByRoleName(String roleName);
 }

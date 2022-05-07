@@ -15,7 +15,8 @@ VALUES (1, 1),
        (3, 2);
 
 INSERT INTO product_category(name, description, created_at)
-VALUES ('Laptop', 'Portable Computers', CURRENT_TIMESTAMP);
+VALUES ('Laptop', 'Portable Computers', CURRENT_TIMESTAMP),
+       ('Android Mobile', 'Smart Phones', CURRENT_TIMESTAMP);
 
 INSERT INTO product_inventory(quantity, created_at)
 VALUES
