@@ -1,10 +1,10 @@
-package za.ac.cput.restapi.controller.UserController;
+package za.ac.cput.restapi.controller.User;
 
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;
-import za.ac.cput.restapi.entity.User;
+import za.ac.cput.restapi.entity.User.User;
 
 import java.util.List;
 import java.util.stream.StreamSupport;

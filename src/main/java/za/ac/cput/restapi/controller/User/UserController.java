@@ -1,4 +1,4 @@
-package za.ac.cput.restapi.controller.UserController;
+package za.ac.cput.restapi.controller.User;
 
 import lombok.AllArgsConstructor;
 import org.springframework.hateoas.CollectionModel;
@@ -6,8 +6,8 @@ import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import za.ac.cput.restapi.entity.User;
-import za.ac.cput.restapi.service.UserService;
+import za.ac.cput.restapi.entity.User.User;
+import za.ac.cput.restapi.service.User.UserService;
 
 @RestController
 @RequestMapping("/api/users")

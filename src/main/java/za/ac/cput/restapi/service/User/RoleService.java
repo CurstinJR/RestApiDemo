@@ -1,9 +1,9 @@
-package za.ac.cput.restapi.service;
+package za.ac.cput.restapi.service.User;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import za.ac.cput.restapi.entity.Role;
-import za.ac.cput.restapi.repository.RoleRepository;
+import za.ac.cput.restapi.entity.User.Role;
+import za.ac.cput.restapi.repository.User.RoleRepository;
 
 import java.util.HashSet;
 import java.util.Set;
